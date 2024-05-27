@@ -5,10 +5,10 @@ import streamlit as st
 def load_data():
     # the last 6 months taken from https://earthquake.usgs.gov/earthquakes/search/
 
-    file1 = "/home/user/Project/2022-09-01 to 2022-10-01 World Earthquakes.csv"
-    file2 = "/home/user/Project/2022-10-01 to 2022-11-16 World Earthquakes.csv"
-    file3 = "/home/user/Project/2022-11-16 to 2023-01-05 World Earthquakes.csv"
-    file4 = "/home/user/Project/2023-01-05 to 2023-03-01 World Earthquakes.csv"
+    file1 = "./2022-09-01 to 2022-10-01 World Earthquakes.csv"
+    file2 = "./2022-10-01 to 2022-11-16 World Earthquakes.csv"
+    file3 = "./2022-11-16 to 2023-01-05 World Earthquakes.csv"
+    file4 = "./2023-01-05 to 2023-03-01 World Earthquakes.csv"
     df1,df2,df3,df4 = pd.read_csv(file1),pd.read_csv(file2),pd.read_csv(file3),pd.read_csv(file4)
     df = pd.concat([df1[::-1],df2[::-1],df3[::-1],df4[::-1]],ignore_index = True)
 
